@@ -63,7 +63,7 @@ h3{color:#ffdf6b}h4{color:#ffe9a3}.dot{width:10px;height:10px;border-radius:50%;
 </div>
 <div id="sec-buy" class="section"><div class="card"><h3>🛒 خرید لایسنس</h3><select id="buyPlan"></select><div id="buyPrice" class="price"></div><input id="buyName" placeholder="نام"><input id="buyMobile" placeholder="09..."><div class="card" style="background:#000;text-align:center"><p class="small">💳 شماره کارت:</p><h2 id="showCard" style="direction:ltr;color:#ffdf6b">---</h2><p class="small" id="showOwner"></p><button class="copybtn" onclick="copyCard()">کپی</button></div><label>رسید</label><input type="file" id="buyReceipt" accept="image/*"><button class="btn btn-gold" onclick="submitOrder()">ارسال رسید</button><div id="orderResult"></div></div></div>
 <div id="sec-track" class="section"><div class="card"><h3>🔍 پیگیری</h3><input id="trackId" placeholder="کد پیگیری"><button class="btn btn-green" onclick="trackOrder()">بررسی</button><div id="trackResult" style="margin-top:10px"></div></div></div>
-<div id="sec-adminlogin" class="section"><div class="card"><h3>🔐 ورود مدیر</h3><input type="password" id="adminPass" placeholder="پیش‌فرض 1234"><button class="btn btn-gold" onclick="adminLogin()">ورود</button></div></div>
+<div id="sec-adminlogin" class="section"><div class="card"><h3>🔐 ورود مدیر</h3><input type="password" id="adminPass" placeholder="رمز مدیر"><button class="btn btn-gold" onclick="adminLogin()">ورود</button></div></div>
 <div id="sec-admin" class="section"><div class="card">
 <div class="row"><h3>⚙️ پنل مدیریت</h3><button class="copybtn" onclick="adminLogout()">خروج</button></div>
 <div class="admin-nav"><button id="abtn1" class="active" onclick="adminTab('dns')">دی‌انس</button><button id="abtn2" onclick="adminTab('vpn')">سرور</button><button id="abtn3" onclick="adminTab('price')">قیمت گیگی</button><button id="abtn4" onclick="adminTab('lic')">لایسنس</button><button id="abtn5" onclick="adminTab('orders')">سفارش‌ها</button><button id="abtn6" onclick="adminTab('pay')">اتصال و کارت</button></div>
@@ -87,7 +87,7 @@ h3{color:#ffdf6b}h4{color:#ffe9a3}.dot{width:10px;height:10px;border-radius:50%;
 <script>
 const DEFAULT_BIN_ID="6b08315bab3a7b614482b271";const DEFAULT_MASTER_KEY="$2a$10$y0RCL.deWB8jwGjbmlprp.grIG6VKrwTni3MstpLTfv.aPq61j0d2";
 let DB_KEY='gold_jsonbin_v1';let db=null;let selVPN=1;
-function defaultDB(){return{adminPass:'1234',cardNumber:'6037991234567890',cardOwner:'به‌نام گلدن نت',orderSeq:1001,pricePerGb:1800,vpnBase:35000,coef3:2.6,coef6:4.8,coef12:8.5,unlimitedPrice:280000,binId:'6b08315bab3a7b614482b271',masterKey:'$2a$10$y0RCL.deWB8jwGjbmlprp.grIG6VKrwTni3MstpLTfv.aPq61j0d2',tgToken:'',tgChat:'',dns:[{id:1,name:'کلادفلر',a1:'1.1.1.1',a2:'1.0.0.1',loc:'جهانی',price:0},{id:2,name:'گیمینگ VIP',a1:'9.9.9.9',a2:'149.112.112.112',loc:'آلمان',price:50000}],vpnServers:[{id:1,name:'آلمان ۱',country:'آلمان',flag:'🇩🇪',ping:78,extra:0},{id:2,name:'ترکیه گیمینگ',country:'ترکیه',flag:'🇹🇷',ping:45,extra:15000}],plans:[{id:1,title:'۱ ماهه ویژه',days:30,price:60000}],licenses:[],orders:[]};}
+function defaultDB(){return{adminPass:'Q3YGnhG3G3s7LE25',cardNumber:'6037991234567890',cardOwner:'به‌نام گلدن نت',orderSeq:1001,pricePerGb:1800,vpnBase:35000,coef3:2.6,coef6:4.8,coef12:8.5,unlimitedPrice:280000,binId:'6b08315bab3a7b614482b271',masterKey:'$2a$10$y0RCL.deWB8jwGjbmlprp.grIG6VKrwTni3MstpLTfv.aPq61j0d2',tgToken:'',tgChat:'',dns:[{id:1,name:'کلادفلر',a1:'1.1.1.1',a2:'1.0.0.1',loc:'جهانی',price:0},{id:2,name:'گیمینگ VIP',a1:'9.9.9.9',a2:'149.112.112.112',loc:'آلمان',price:50000}],vpnServers:[{id:1,name:'آلمان ۱',country:'آلمان',flag:'🇩🇪',ping:78,extra:0},{id:2,name:'ترکیه گیمینگ',country:'ترکیه',flag:'🇹🇷',ping:45,extra:15000}],plans:[{id:1,title:'۱ ماهه ویژه',days:30,price:60000}],licenses:[],orders:[]};}
 function getBin(){return (db.binId||localStorage.getItem('jb_bin')||DEFAULT_BIN_ID||'').trim();}
 function getKey(){return (db.masterKey||localStorage.getItem('jb_key')||DEFAULT_MASTER_KEY||'').trim();}
 function cloudOn(){return getBin().length>10&&getKey().length>10;}
@@ -141,4 +141,4 @@ function saveSettings(){db.cardNumber=document.getElementById('set_card').value|
 (async function(){updateCloudBadge();await cloudLoadConfig();renderDNS();renderVPNServers();calcVPN();renderBuy();updateBadge();updateCloudBadge();})();
 </script>
 </body>
-                                                                                  </html>
+</html>
