@@ -3,97 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>گلدن نت | اینترنت آزاد حرفه‌ای</title>
+<title>GOLDEN NET | گلدن نت</title>
 <style>
 *{box-sizing:border-box;font-family:Vazirmatn,Tahoma,sans-serif}
-body{margin:0;background:#0b1020;color:#fff;min-height:100vh}
-header{position:sticky;top:0;z-index:10;background:linear-gradient(135deg,#0b1020,#1a2140);padding:12px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid # gold;border-bottom:1px solid #f5c54233}
-.logo{font-weight:900;font-size:20px;color:#f5c542}.logo span{color:#fff}
-.dot{width:12px;height:12px;border-radius:50%;background:#555;display:inline-block;margin-left:6px}.dot.ok{background:#22c55e;box-shadow:0 0 10px #22c55e}.dot.err{background:#ef4444}
-main{padding:14px 14px 90px;max-width:720px;margin:auto}
-section{display:none;animation:fade .3s}section.active{display:block}@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.card{background:#151c36;border:1px solid #ffffff14;border-radius:16px;padding:14px;margin:10px 0}
-.btn{background:linear-gradient(135deg,#f5c542,#ff8a00);border:0;color:#000;font-weight:800;padding:11px 16px;border-radius:12px;width:100%;margin:6px 0;cursor:pointer}
-.btn2{background:#222c55;color:#fff;border:1px solid #ffffff22;padding:10px;border-radius:12px;width:100%;margin:6px 0;cursor:pointer}
-input,select,textarea{width:100%;background:#0e1430;color:#fff;border:1px solid #ffffff22;border-radius:12px;padding:11px;margin:6px 0}
-nav{position:fixed;bottom:0;right:0;left:0;background:#0e1430ee;backdrop-filter:blur(10px);display:flex;border-top:1px solid #ffffff18;z-index:20}
-nav button{flex:1;background:0;border:0;color:#aab;padding:10px 2px;font-size:11px;cursor:pointer}nav button.active{color:#f5c542;font-weight:900}
-.badge{padding:4px 10px;border-radius:20px;font-size:12px;background:#222c55;display:inline-block}
-.badge.ok{background:#16a34a}.badge.off{background:#555}
-.kpi{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}.kpi div{background:#0e1430;border-radius:12px;padding:10px;text-align:center}
-.dnsrow{display:flex;justify-content:space-between;align-items:center;background:#0e1430;border-radius:12px;padding:10px;margin:6px 0}
-#toast{position:fixed;top:12px;left:50%;transform:translateX(-50%);background:#000d;border:1px solid #f5c54255;padding:10px 18px;border-radius:12px;display:none;z-index:99}
-.atabs{display:flex;gap:6px;overflow:auto}.atabs button{white-space:nowrap;background:#222c55;color:#fff;border:0;padding:8px 12px;border-radius:10px;cursor:pointer}.atabs button.active{background:#f5c542;color:#000}
-table{width:100%;font-size:12px;border-collapse:collapse}td,th{border-bottom:1px solid #ffffff14;padding:6px;text-align:right}
+body{margin:0;background:#050506;color:#fff;min-height:100vh;background-image:radial-gradient(circle at 50% 0%,#2a200a 0%,#050506 60%)}
+header{position:sticky;top:0;z-index:20;background:#0a0a0df2;backdrop-filter:blur(12px);padding:12px 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #f5c54233}
+.logo{font-weight:900;font-size:20px;letter-spacing:.5px}.logo .g{color:#f5c542}.logo .w{color:#fff}.logo .fa{color:#fff;font-size:16px}
+.top-left{display:flex;align-items:center;gap:8px}
+.vip{background:#16a34a;color:#fff;font-size:12px;font-weight:800;padding:7px 14px;border-radius:20px}
+.gdot{width:10px;height:10px;background:#22c55e;border-radius:50%;box-shadow:0 0 10px #22c55e;display:inline-block}
+#cloudDot{width:10px;height:10px;border-radius:50%;background:#555;display:inline-block}
+#cloudDot.ok{background:#22c55e;box-shadow:0 0 8px #22c55e}#cloudDot.err{background:#ef4444}
+main{padding:16px 14px 110px;max-width:760px;margin:auto}
+section{display:none}section.active{display:block;animation:fade .25s}@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.card{background:#141318;border:1px solid #f5c54222;border-radius:20px;padding:18px;margin:12px 0;box-shadow:0 8px 30px #0008}
+.card h3{margin:0 0 10px;text-align:right}
+.hero{background:linear-gradient(135deg,#f5c542,#ff7a00);color:#000;border:0}
+.hero h2{margin:0}
+.kpi{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:12px}
+.kpi div{background:#00000055;border-radius:14px;padding:10px;text-align:center}
+.btn{background:linear-gradient(135deg,#ffd45e,#ff8a00);border:0;color:#000;font-weight:900;padding:14px;border-radius:14px;width:100%;margin:8px 0;cursor:pointer;font-size:16px}
+.btn2{background:#1e1d24;color:#fff;border:1px solid #ffffff1f;padding:11px;border-radius:12px;width:100%;margin:6px 0;cursor:pointer}
+input,select,textarea{width:100%;background:#0c0c12;color:#fff;border:1px solid #ffffff1c;border-radius:14px;padding:14px;margin:7px 0;font-size:15px}
+input::placeholder,textarea::placeholder{color:#ffffff55;text-align:right}
+.badge{padding:5px 12px;border-radius:20px;font-size:12px;background:#2a2a32;display:inline-block}
+.badge.ok{background:#16a34a}.badge.off{background:#444}
+.dnsrow{display:flex;justify-content:space-between;align-items:center;background:#0c0c12;border:1px solid #ffffff10;border-radius:14px;padding:10px 12px;margin:8px 0}
+.dnsrow button{background:#22222c;color:#fff;border:0;padding:8px 14px;border-radius:10px;margin-right:4px;cursor:pointer}
+nav{position:fixed;bottom:0;right:0;left:0;background:#0b0b0efa;border-top:1px solid #f5c54222;display:flex;z-index:30;padding:6px 2px 10px}
+nav button{flex:1;background:0;border:0;color:#8b8b95;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px}
+nav button .ic{font-size:20px;line-height:1}
+nav button.active{color:#f5c542;font-weight:900}
+#toast{position:fixed;top:14px;left:50%;transform:translateX(-50%);background:#000e;border:1px solid #f5c54266;padding:10px 18px;border-radius:12px;display:none;z-index:99}
+.atabs{display:flex;gap:6px;overflow:auto;padding:6px 0}.atabs button{white-space:nowrap;background:#22222c;color:#fff;border:0;padding:8px 12px;border-radius:10px;cursor:pointer}.atabs button.active{background:#f5c542;color:#000;font-weight:800}
+table{width:100%;font-size:13px;border-collapse:collapse}td,th{border-bottom:1px solid #ffffff12;padding:8px 6px;text-align:right}
+small{color:#aaa}
 </style>
 </head>
 <body>
 <div id="toast"></div>
 <header>
-<div class="logo">GOLDEN <span>NET گلدن نت</span></div>
-<div><span id="cloudDot" class="dot"></span><span id="homeConn" class="badge">متصل نیستی</span></div>
+<div class="logo"><span class="g">GOLDEN</span> <span class="w">NET</span> <span class="fa">گلدن نت</span> <span class="gdot"></span> <span id="cloudDot"></span></div>
+<div class="top-left"><span class="vip">✅ گیمینگ VIP</span></div>
 </header>
 <main>
 <section id="sec-home" class="active">
-<div class="card" style="background:linear-gradient(135deg,#f5c542,#ff3d81);color:#000">
+<div class="card hero">
 <h2>اینترنت آزاد، سریع و بدون قطعی 🚀</h2>
-<p>دی‌ان‌اس گیمینگ، وی‌پی‌ان پرسرعت و پشتیبانی واقعی — همه در یک اپ</p>
-<div class="kpi">
-<div><b id="stDns">0</b><br>سرور DNS</div>
-<div><b id="stUsers">0</b><br>لایسنس فعال</div>
-<div><b id="stOrders">0</b><br>سفارش</div>
+<p>دی‌ان‌اس گیمینگ، وی‌پی‌ان پرسرعت و پشتیبانی واقعی</p>
+<div class="kpi"><div><b id="stDns">0</b><br>سرور DNS</div><div><b id="stUsers">0</b><br>لایسنس فعال</div><div><b id="stOrders">0</b><br>سفارش</div></div>
+<p style="margin:8px 0">وضعیت اتصال: <span id="homeConn" class="badge">متصل نیستی</span></p>
 </div>
-</div>
-<div class="card">
-<h3>فعال‌سازی لایسنس 🔑</h3>
-<p>وضعیت شما: <span id="licBadge" class="badge">بدون لایسنس</span></p>
-<input id="licInput" placeholder="کد لایسنس مثلا GOLD-XXXX-XXXX">
-<button class="btn" onclick="activateLicense()">فعال‌سازی</button>
-</div>
-<div class="card"><h3>چرا گلدن نت؟</h3><p>✅ اتصال ابری مشترک برای همه کاربران ✅ ضدتحریم و گیمینگ ✅ پیگیری سفارش با کد ✅ تیکت پشتیبانی ✅ مدیریت کامل مدیر</p></div>
+<div class="card"><h3>فعال‌سازی لایسنس 🔑</h3><p>وضعیت شما: <span id="licBadge" class="badge">بدون لایسنس</span></p><input id="licInput" placeholder="کد لایسنس مثلا GOLD-XXXX-XXXX"><button class="btn" onclick="activateLicense()">فعال‌سازی</button></div>
+<div class="card"><h3>چرا گلدن نت؟</h3><p>✅ اتصال ابری مشترک ✅ ضدتحریم و گیمینگ ✅ پیگیری سفارش ✅ تیکت پشتیبانی ✅ پنل کامل مدیر</p></div>
 </section>
 <section id="sec-dns">
-<div class="card"><h3>وضعیت اتصال 🌐 <span id="connBadge" class="badge">متصل نیستی</span></h3>
-<p>مرورگر اجازه تغییر مستقیم DNS گوشی را نمی‌دهد، برای همین گلدن نت بهترین DNS را کپی می‌کند و شما را به تنظیمات می‌برد.</p>
-<button class="btn2" onclick="openPrivateDNS()">بازکردن تنظیمات Private DNS اندروید ⚙️</button>
-<button class="btn2" onclick="disconnectDNS()">قطع اتصال ❌</button>
-</div>
-<div class="card"><h3>DNS خودت را وارد کن ✍️</h3>
-<input id="custom_a1" placeholder="DNS اول مثلا 1.1.1.1">
-<input id="custom_a2" placeholder="DNS دوم مثلا 1.0.0.1">
-<input id="custom_host" placeholder="هاست مثلا one.one.one.one">
-<button class="btn" onclick="connectCustomDNS()">اتصال دستی ✅</button>
-</div>
+<div class="card"><h3>وضعیت اتصال 🌐 <span id="connBadge" class="badge">متصل نیستی</span></h3><p><small>مرورگر اجازه تغییر مستقیم DNS گوشی را نمی‌دهد. گلدن نت DNS را کپی می‌کند و شما را به تنظیمات می‌برد.</small></p><button class="btn2" onclick="openPrivateDNS()">بازکردن تنظیمات Private DNS ⚙️</button><button class="btn2" onclick="disconnectDNS()">قطع اتصال ❌</button></div>
+<div class="card"><h3>DNS دستی ✍️</h3><input id="custom_a1" placeholder="DNS اول مثلا 1.1.1.1"><input id="custom_a2" placeholder="DNS دوم مثلا 1.0.0.1"><input id="custom_host" placeholder="هاست مثلا one.one.one.one"><button class="btn" onclick="connectCustomDNS()">اتصال دستی ✅</button></div>
 <div class="card"><h3>لیست سرورها 🔥</h3><input id="dnsSearch" placeholder="جست‌وجو..." oninput="renderDNS()"><div id="dnsList"></div></div>
 </section>
 <section id="sec-vpn">
-<div class="card"><h3>کانفیگ‌های VIP 🔒</h3><p>برای دیدن کانفیگ باید لایسنس فعال داشته باشی.</p><div id="vpnList"></div></div>
+<div class="card"><h3>کانفیگ‌های VIP 🔒</h3><p><small>برای دیدن کانفیگ باید لایسنس فعال داشته باشی.</small></p><div id="vpnList"></div></div>
 </section>
 <section id="sec-buy">
 <div class="card"><h3>خرید اشتراک 💳</h3><div id="planList"></div></div>
-<div class="card"><h3>ثبت سفارش</h3>
-<input id="o_name" placeholder="نام">
-<input id="o_mobile" placeholder="موبایل">
-<select id="o_plan"></select>
-<p>کارت: <b id="cardShow">6037990000000000</b> <span id="cardOwnerShow">به‌نام گلدن نت</span> <button onclick="copyCard()">کپی</button></p>
-<input type="file" id="o_receipt" accept="image/*">
-<button class="btn" onclick="submitOrder()">ارسال سفارش ✅</button>
-</div>
+<div class="card"><h3>ثبت سفارش</h3><input id="o_name" placeholder="نام"><input id="o_mobile" placeholder="موبایل"><select id="o_plan"></select><p>کارت: <b id="cardShow">6037990000000000</b> <span id="cardOwnerShow">به‌نام گلدن نت</span> <button onclick="copyCard()">کپی</button></p><input type="file" id="o_receipt" accept="image/*"><button class="btn" onclick="submitOrder()">ارسال سفارش ✅</button></div>
 </section>
 <section id="sec-track">
 <div class="card"><h3>پیگیری سفارش 🔎</h3><input id="tr_code" placeholder="کد پیگیری"><button class="btn" onclick="trackOrder()">بررسی</button><div id="trRes"></div></div>
 </section>
 <section id="sec-ticket">
-<div class="card"><h3>تیکت پشتیبانی 🎫</h3>
-<input id="t_name" placeholder="نام"><input id="t_mobile" placeholder="موبایل"><input id="t_subject" placeholder="موضوع"><textarea id="t_msg" placeholder="متن پیام"></textarea>
-<button class="btn" onclick="submitTicket()">ثبت تیکت</button></div>
-<div class="card"><h3>تیکت‌های من</h3><div id="myTickets"></div></div>
+<div class="card"><h3 style="text-align:right">🎫 تیکت پشتیبانی</h3><input id="t_name" placeholder="نام"><input id="t_mobile" placeholder="موبایل"><input id="t_subject" placeholder="موضوع"><textarea id="t_msg" rows="4" placeholder="متن پیام"></textarea><button class="btn" onclick="submitTicket()">ثبت تیکت</button></div>
+<div class="card"><h3 style="text-align:right">تیکت‌های من</h3><div id="myTickets">تیکتی نداری</div></div>
 </section>
 <section id="sec-adminlogin">
 <div class="card"><h3>ورود مدیر 🔐</h3><input id="adminPassInput" type="password" placeholder="رمز مدیر"><button class="btn" onclick="adminLogin()">ورود</button></div>
 </section>
 <section id="sec-admin">
-<div class="card"><h3>پنل مدیریت 👑 <button onclick="publish()">اتصال + انتشار اولیه ☁️</button> <button onclick="exportBackup()">بکاپ</button></h3>
+<div class="card"><h3>پنل مدیریت 👑</h3><button class="btn2" onclick="publish()">اتصال + انتشار اولیه ☁️</button><button class="btn2" onclick="exportBackup()">دانلود بکاپ JSON</button>
 <div class="atabs"><button onclick="showAtab('atab-orders',this)" class="active">سفارش‌ها</button><button onclick="showAtab('atab-licenses',this)">لایسنس‌ها</button><button onclick="showAtab('atab-tickets',this)">تیکت‌ها</button><button onclick="showAtab('atab-dns',this)">DNS</button><button onclick="showAtab('atab-settings',this)">تنظیمات</button></div>
 <div id="atab-orders"><div id="ordersAdmin"></div></div>
 <div id="atab-licenses" style="display:none"><input id="licSearch" placeholder="جست‌وجوی لایسنس..." oninput="renderLicenses()"><button class="btn2" onclick="createLicense()">+ ساخت لایسنس جدید</button><div id="licAdmin"></div></div>
@@ -104,74 +91,69 @@ table{width:100%;font-size:12px;border-collapse:collapse}td,th{border-bottom:1px
 </section>
 </main>
 <nav>
-<button id="t-home" class="active" onclick="go('sec-home',this)">خانه</button>
-<button id="t-dns" onclick="go('sec-dns',this)">DNS</button>
-<button id="t-vpn" onclick="go('sec-vpn',this)">VPN</button>
-<button id="t-buy" onclick="go('sec-buy',this)">خرید</button>
-<button id="t-track" onclick="go('sec-track',this)">پیگیری</button>
-<button id="t-ticket" onclick="go('sec-ticket',this)">تیکت</button>
-<button id="t-admin" onclick="go('sec-adminlogin',this)">مدیر</button>
+<button id="t-home" class="active" onclick="go('sec-home',this)"><span class="ic">🏠</span><span>خانه</span></button>
+<button id="t-dns" onclick="go('sec-dns',this)"><span class="ic">🌐</span><span>DNS</span></button>
+<button id="t-vpn" onclick="go('sec-vpn',this)"><span class="ic">🚀</span><span>VPN</span></button>
+<button id="t-buy" onclick="go('sec-buy',this)"><span class="ic">🛒</span><span>خرید</span></button>
+<button id="t-track" onclick="go('sec-track',this)"><span class="ic">🔍</span><span>پیگیری</span></button>
+<button id="t-ticket" onclick="go('sec-ticket',this)"><span class="ic">🎫</span><span>تیکت</span></button>
+<button id="t-admin" onclick="go('sec-adminlogin',this)"><span class="ic">👑</span><span>مدیر</span></button>
 </nav>
 <script>
-const DB_KEY='gold_jsonbin_v9';
+const DB_KEY='gold_jsonbin_v10';
 const DEFAULT_BIN_ID="6b08315bab3a7b614482b271";
 const DEFAULT_MASTER_KEY="$2a$10$y0RCL.deWB8jwGjbmlprp.grIG6VKrwTni3MstpLTfv.aPq61j0d2";
 const FORCE_ADMIN_PASS="Q3YGnhG3G3s7LE25";
-function defaultDB(){return{binId:'6b08315bab3a7b614482b271',masterKey:'$2a$10$y0RCL.deWB8jwGjbmlprp.grIG6VKrwTni3MstpLTfv.aPq61j0d2',adminPass:'Q3YGnhG3G3s7LE25',cardNumber:'6037990000000000',cardOwner:'به‌نام گلدن نت',telegramBot:'',telegramChatId:'',ticketSeq:5001,orderSeq:1001,plans:[{id:'m1',name:'یک‌ماهه',price:90000},{id:'m3',name:'سه‌ماهه',price:240000},{id:'y1',name:'سالانه',price:850000}],dns:[{id:1,name:'کلادفلر',a1:'1.1.1.1',a2:'1.0.0.1',host:'one.one.one.one',doh:'https://cloudflare-dns.com/dns-query',loc:'جهانی',cat:'ضدتحریم',desc:'سریع و امن'},{id:2,name:'گوگل',a1:'8.8.8.8',a2:'8.8.4.4',host:'dns.google',doh:'https://dns.google/dns-query',loc:'جهانی',cat:'عمومی',desc:'پایدار'},{id:3,name:'گیمینگ VIP',a1:'178.22.122.100',a2:'185.51.200.2',host:'gaming.golden.ir',doh:'https://cloudflare-dns.com/dns-query',loc:'ایران',cat:'گیمینگ',desc:'پینگ پایین بازی'}],vpn:[{id:1,name:'سرور آلمان 🇩🇪',conf:'vless://abc123@golden.ir:443?security=tls#Germany'}],licenses:[],orders:[],tickets:[]}}
+function defaultDB(){return{binId:'6b08315bab3a7b614482b271',masterKey:'$2a$10$y0RCL.deWB8jwGjbmlprp.grIG6VKrwTni3MstpLTfv.aPq61j0d2',adminPass:'Q3YGnhG3G3s7LE25',cardNumber:'6037990000000000',cardOwner:'به‌نام گلدن نت',telegramBot:'',telegramChatId:'',ticketSeq:5001,orderSeq:1001,plans:[{id:'m1',name:'یک‌ماهه',price:90000},{id:'m3',name:'سه‌ماهه',price:240000},{id:'y1',name:'سالانه',price:850000}],dns:[{id:1,name:'کلادفلر',a1:'1.1.1.1',a2:'1.0.0.1',host:'one.one.one.one',doh:'https://cloudflare-dns.com/dns-query',loc:'جهانی',cat:'ضدتحریم'},{id:2,name:'گوگل',a1:'8.8.8.8',a2:'8.8.4.4',host:'dns.google',doh:'https://dns.google/dns-query',loc:'جهانی',cat:'عمومی'},{id:3,name:'گیمینگ VIP',a1:'178.22.122.100',a2:'185.51.200.2',host:'gaming.golden.ir',doh:'https://cloudflare-dns.com/dns-query',loc:'ایران',cat:'گیمینگ'}],vpn:[{id:1,name:'سرور آلمان',conf:'vless://abc123@golden.ir:443?security=tls#Germany'}],licenses:[],orders:[],tickets:[]}}
 let db=defaultDB();
 function toast(m){let t=document.getElementById('toast');t.innerText=m;t.style.display='block';setTimeout(()=>t.style.display='none',2500)}
-function loadLocal(){try{['gold_jsonbin_v1','gold_jsonbin_v2','gold_jsonbin_v3','gold_jsonbin_v4','gold_jsonbin_v5','gold_jsonbin_v6','gold_jsonbin_v7','gold_jsonbin_v8'].forEach(k=>localStorage.removeItem(k));let s=localStorage.getItem(DB_KEY);if(s){db=Object.assign(defaultDB(),JSON.parse(s))}}catch(e){}if(db.adminPass!==FORCE_ADMIN_PASS){db.adminPass=FORCE_ADMIN_PASS}if(!db.binId)db.binId=DEFAULT_BIN_ID;if(!db.masterKey)db.masterKey=DEFAULT_MASTER_KEY;saveLocal()}
+function loadLocal(){try{['gold_jsonbin_v1','gold_jsonbin_v2','gold_jsonbin_v3','gold_jsonbin_v4','gold_jsonbin_v5','gold_jsonbin_v6','gold_jsonbin_v7','gold_jsonbin_v8','gold_jsonbin_v9'].forEach(k=>localStorage.removeItem(k));let s=localStorage.getItem(DB_KEY);if(s){db=Object.assign(defaultDB(),JSON.parse(s))}}catch(e){}if(db.adminPass!==FORCE_ADMIN_PASS)db.adminPass=FORCE_ADMIN_PASS;if(!db.binId)db.binId=DEFAULT_BIN_ID;if(!db.masterKey)db.masterKey=DEFAULT_MASTER_KEY;saveLocal()}
 function saveLocal(){localStorage.setItem(DB_KEY,JSON.stringify(db))}
-function setCloud(ok){let d=document.getElementById('cloudDot');d.className='dot '+(ok?'ok':'err')}
+function setCloud(ok){let d=document.getElementById('cloudDot');d.className=ok?'ok':'err';d.id='cloudDot'}
 async function jbGet(){let r=await fetch('https://api.jsonbin.io/v3/b/'+db.binId+'/latest',{headers:{'X-Master-Key':db.masterKey}});if(!r.ok)throw 0;let j=await r.json();return j.record}
 async function jbPut(){let r=await fetch('https://api.jsonbin.io/v3/b/'+db.binId,{method:'PUT',headers:{'Content-Type':'application/json','X-Master-Key':db.masterKey},body:JSON.stringify(db)});if(!r.ok)throw 0}
 async function sendTG(txt){if(!db.telegramBot||!db.telegramChatId)return;try{await fetch('https://api.telegram.org/bot'+db.telegramBot+'/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:db.telegramChatId,text:txt})})}catch(e){}}
 async function init(){loadLocal();updateBadge();renderAll();restoreConn();try{let c=await jbGet();db=Object.assign(defaultDB(),c);if(db.adminPass!==FORCE_ADMIN_PASS)db.adminPass=FORCE_ADMIN_PASS;saveLocal();setCloud(true);renderAll()}catch(e){setCloud(false)}}
 async function publish(){saveLocal();try{await jbPut();setCloud(true);toast('انتشار موفق شد ☁️✅')}catch(e){setCloud(false);toast('خطا در اتصال ابری')}}
-function go(id,el){document.querySelectorAll('main section').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));if(el)el.classList.add('active');if(id==='sec-ticket')loadMyTickets()}
+function go(id,el){document.querySelectorAll('main section').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));if(el)el.classList.add('active');if(id==='sec-ticket')loadMyTickets();window.scrollTo(0,0)}
 function showAtab(id,el){['atab-orders','atab-licenses','atab-tickets','atab-dns','atab-settings'].forEach(a=>document.getElementById(a).style.display='none');document.getElementById(id).style.display='block';document.querySelectorAll('.atabs button').forEach(b=>b.classList.remove('active'));el.classList.add('active')}
 function renderAll(){renderDNS();renderPlans();renderLicenses();renderOrdersAdmin();loadTicketsAdmin();renderDnsAdmin();renderVpn();updateStats();document.getElementById('cardShow').innerText=db.cardNumber;document.getElementById('cardOwnerShow').innerText=db.cardOwner;document.getElementById('s_card').value=db.cardNumber||'';document.getElementById('s_owner').value=db.cardOwner||'';document.getElementById('s_bot').value=db.telegramBot||'';document.getElementById('s_chat').value=db.telegramChatId||''}
 function updateStats(){document.getElementById('stDns').innerText=(db.dns||[]).length;document.getElementById('stOrders').innerText=(db.orders||[]).length;document.getElementById('stUsers').innerText=(db.licenses||[]).filter(l=>l.status==='active').length}
-// DNS
-function renderDNS(){let q=(document.getElementById('dnsSearch').value||'').trim();let h='';(db.dns||[]).filter(d=>!q||d.name.includes(q)).forEach(d=>{h+='<div class="dnsrow"><div><b>'+d.name+'</b><br><small>'+d.a1+' | '+d.a2+' | '+d.loc+' | '+d.cat+'</small></div><div><button onclick="selectDNS('+d.id+')">اتصال</button> <button onclick="pingDNS('+d.id+',this)">پینگ</button></div></div>'});document.getElementById('dnsList').innerHTML=h||'موردی نیست'}
-function renderDnsAdmin(){let h='<table>';(db.dns||[]).forEach(d=>{h+='<tr><td>'+d.name+'<br>'+d.a1+'</td><td><button onclick="delDNS('+d.id+')">حذف</button></td></tr>'});document.getElementById('dnsAdmin').innerHTML=h+'</table>'}
-function addDNS(){let n={id:Date.now(),name:document.getElementById('nd_name').value||'جدید',a1:document.getElementById('nd_a1').value,a2:document.getElementById('nd_a2').value,host:document.getElementById('nd_host').value,doh:document.getElementById('nd_doh').value,loc:document.getElementById('nd_loc').value||'ایران',cat:'عمومی',desc:''};db.dns.push(n);saveLocal();renderDNS();renderDnsAdmin();publish()}
+function renderDNS(){let q=(document.getElementById('dnsSearch').value||'').trim();let h='';(db.dns||[]).filter(d=>!q||d.name.includes(q)).forEach(d=>{h+='<div class="dnsrow"><div><b>'+d.name+'</b><br><small>'+d.a1+' | '+d.a2+' | '+d.loc+'</small></div><div><button onclick="selectDNS('+d.id+')">اتصال</button><button onclick="pingDNS('+d.id+',this)">پینگ</button></div></div>'});document.getElementById('dnsList').innerHTML=h||'موردی نیست'}
+function renderDnsAdmin(){let h='<table>';(db.dns||[]).forEach(d=>{h+='<tr><td>'+d.name+'<br><small>'+d.a1+'</small></td><td><button onclick="delDNS('+d.id+')">حذف</button></td></tr>'});document.getElementById('dnsAdmin').innerHTML=h+'</table>'}
+function addDNS(){let n={id:Date.now(),name:document.getElementById('nd_name').value||'جدید',a1:document.getElementById('nd_a1').value,a2:document.getElementById('nd_a2').value,host:document.getElementById('nd_host').value,doh:document.getElementById('nd_doh').value,loc:document.getElementById('nd_loc').value||'ایران',cat:'عمومی'};db.dns.push(n);saveLocal();renderDNS();renderDnsAdmin();publish()}
 function delDNS(id){db.dns=db.dns.filter(x=>x.id!==id);saveLocal();renderDNS();renderDnsAdmin();publish()}
-function selectDNS(id){let d=db.dns.find(x=>x.id===id);if(!d)return;navigator.clipboard&&navigator.clipboard.writeText(d.a1+', '+d.a2);localStorage.setItem('custom_dns',JSON.stringify({a1:d.a1,a2:d.a2,host:d.host}));localStorage.setItem('connected_dns',d.name);setConnUI(d.name+' ✅');toast('کپی شد: '+d.a1);openPrivateDNS()}
-function connectCustomDNS(){let a1=document.getElementById('custom_a1').value.trim(),a2=document.getElementById('custom_a2').value.trim(),host=document.getElementById('custom_host').value.trim();if(!a1)return toast('DNS اول را وارد کن');localStorage.setItem('custom_dns',JSON.stringify({a1,a2,host}));localStorage.setItem('connected_dns','دستی ✅');if(navigator.clipboard)navigator.clipboard.writeText(a1+(a2?', '+a2:''));setConnUI('دستی ✅');toast('ذخیره و کپی شد ✅');openPrivateDNS()}
+function selectDNS(id){let d=db.dns.find(x=>x.id===id);if(!d)return;if(navigator.clipboard)navigator.clipboard.writeText(d.a1+', '+d.a2);localStorage.setItem('connected_dns',d.name+' ✅');setConnUI(d.name+' ✅');toast('کپی شد: '+d.a1);openPrivateDNS()}
+function connectCustomDNS(){let a1=document.getElementById('custom_a1').value.trim(),a2=document.getElementById('custom_a2').value.trim();if(!a1)return toast('DNS اول را وارد کن');localStorage.setItem('connected_dns','دستی ✅');if(navigator.clipboard)navigator.clipboard.writeText(a1+(a2?', '+a2:''));setConnUI('دستی ✅');toast('ذخیره و کپی شد ✅');openPrivateDNS()}
 function disconnectDNS(){localStorage.removeItem('connected_dns');setConnUI('متصل نیستی')}
-function setConnUI(t){document.getElementById('connBadge').innerText=t;document.getElementById('homeConn').innerText=t;let ok=t.includes('✅');document.getElementById('connBadge').className='badge '+(ok?'ok':'off');document.getElementById('homeConn').className='badge '+(ok?'ok':'off')}
+function setConnUI(t){let a=document.getElementById('connBadge'),b=document.getElementById('homeConn');a.innerText=t;b.innerText=t;let ok=t.includes('✅');a.className='badge '+(ok?'ok':'off');b.className='badge '+(ok?'ok':'off')}
 function restoreConn(){let c=localStorage.getItem('connected_dns');setConnUI(c||'متصل نیستی')}
-function openPrivateDNS(){try{window.location.href='intent:#Intent;action=android.net.wifi.PRIVATE_DNS_SETTINGS;end'}catch(e){toast('مسیر: تنظیمات > اتصالات > Private DNS')}}
+function openPrivateDNS(){try{window.location.href='intent:#Intent;action=android.net.wifi.PRIVATE_DNS_SETTINGS;end'}catch(e){toast('تنظیمات > Private DNS')}}
 async function pingDNS(id,btn){let d=db.dns.find(x=>x.id===id);if(!d||!d.doh)return toast('DoH ندارد');btn.innerText='...';let t0=Date.now();try{await fetch(d.doh+'?name=google.com&type=A',{headers:{accept:'application/dns-json'}});btn.innerText=(Date.now()-t0)+'ms'}catch(e){btn.innerText='timeout'}}
-// VPN + License
-function renderVpn(){let lic=getActiveLicense();if(!lic){document.getElementById('vpnList').innerHTML='⛔ لایسنس فعال نداری — از خانه فعال کن';return}let h='';(db.vpn||[]).forEach(v=>{h+='<div class="card">'+v.name+'<br><small>'+v.conf.slice(0,60)+'...</small><br><button onclick="navigator.clipboard.writeText(\''+v.conf+'\');toast(\'کپی شد\')">کپی کانفیگ</button></div>'});document.getElementById('vpnList').innerHTML=h}
-function genCode(){let s='';let c='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';for(let i=0;i<4;i++)s+=c[Math.floor(Math.random()*c.length)];let s2='';for(let i=0;i<4;i++)s2+=c[Math.floor(Math.random()*c.length)];return'GOLD-'+s+'-'+s2}
+function renderVpn(){let lic=getActiveLicense();if(!lic){document.getElementById('vpnList').innerHTML='⛔ لایسنس فعال نداری';return}let h='';(db.vpn||[]).forEach(v=>{h+='<div class="dnsrow"><div><b>'+v.name+'</b><br><small>'+v.conf.slice(0,40)+'...</small></div><button onclick="navigator.clipboard.writeText(\''+v.conf+'\');toast(\'کپی شد\')">کپی</button></div>'});document.getElementById('vpnList').innerHTML=h}
+function genCode(){let c='ABCDEFGHJKLMNPQRSTUVWXYZ23456789',s='',s2='';for(let i=0;i<4;i++)s+=c[Math.floor(Math.random()*c.length)];for(let i=0;i<4;i++)s2+=c[Math.floor(Math.random()*c.length)];return'GOLD-'+s+'-'+s2}
 function createLicense(){let code=genCode();db.licenses.unshift({code,status:'active',createdAt:Date.now(),expiresAt:Date.now()+30*864e5});saveLocal();renderLicenses();publish();toast('ساخته شد: '+code)}
-function renderLicenses(){let q=(document.getElementById('licSearch').value||'').trim();let h='<table>';(db.licenses||[]).filter(l=>!q||l.code.includes(q)).forEach(l=>{let st=l.status!=='active'?'⛔ غیرفعال':(l.expiresAt&&l.expiresAt<Date.now()?'⌛ منقضی':'✅ فعال');h+='<tr><td>'+l.code+'<br><small>'+st+'</small></td><td><button data-code="'+l.code+'" onclick="toggleLicense(\''+l.code+'\')">فعال/غیرفعال</button> <button data-code="'+l.code+'" onclick="delLicense(\''+l.code+'\')">حذف</button></td></tr>'});document.getElementById('licAdmin').innerHTML=h+'</table>'}
+function renderLicenses(){let q=(document.getElementById('licSearch').value||'').trim();let h='<table>';(db.licenses||[]).filter(l=>!q||l.code.includes(q)).forEach(l=>{let st=l.status!=='active'?'⛔ غیرفعال':(l.expiresAt&&l.expiresAt<Date.now()?'⌛ منقضی':'✅ فعال');h+='<tr><td>'+l.code+'<br><small>'+st+'</small></td><td><button data-code="'+l.code+'" onclick="toggleLicense(\''+l.code+'\')">تغییر</button> <button data-code="'+l.code+'" onclick="delLicense(\''+l.code+'\')">حذف</button></td></tr>'});document.getElementById('licAdmin').innerHTML=h+'</table>'}
 function toggleLicense(code){let l=db.licenses.find(x=>x.code===code);if(l){l.status=l.status==='active'?'disabled':'active';saveLocal();renderLicenses();updateBadge();publish()}}
 function delLicense(code){db.licenses=db.licenses.filter(x=>x.code!==code);saveLocal();renderLicenses();updateBadge();publish()}
 function getActiveLicense(){let c=localStorage.getItem('my_license');if(!c)return null;let l=(db.licenses||[]).find(x=>x.code===c);if(!l||l.status!=='active')return null;if(l.expiresAt&&l.expiresAt<Date.now())return null;return l}
-function activateLicense(){let c=document.getElementById('licInput').value.trim();let l=(db.licenses||[]).find(x=>x.code===c);if(!l)return toast('کد اشتباه است');if(l.status!=='active')return toast('لایسنس غیرفعال است ⛔');if(l.expiresAt&&l.expiresAt<Date.now())return toast('منقضی شده ⌛');localStorage.setItem('my_license',c);updateBadge();renderVpn();toast('فعال شد ✅')}
+function activateLicense(){let c=document.getElementById('licInput').value.trim();let l=(db.licenses||[]).find(x=>x.code===c);if(!l)return toast('کد اشتباه است');if(l.status!=='active')return toast('غیرفعال است ⛔');if(l.expiresAt&&l.expiresAt<Date.now())return toast('منقضی شده ⌛');localStorage.setItem('my_license',c);updateBadge();renderVpn();toast('فعال شد ✅')}
 function updateBadge(){let l=getActiveLicense();let b=document.getElementById('licBadge');if(l){b.innerText='✅ فعال';b.className='badge ok'}else{b.innerText='بدون لایسنس';b.className='badge off'}}
-// Buy / Orders
-function renderPlans(){let h='';(db.plans||[]).forEach(p=>{h+='<div class="dnsrow"><div><b>'+p.name+'</b><br>'+p.price+' تومان</div><button onclick="buyPlan(\''+p.id+'\')">خرید</button></div>'});document.getElementById('planList').innerHTML=h;let o=document.getElementById('o_plan');o.innerHTML=(db.plans||[]).map(p=>'<option value="'+p.id+'">'+p.name+'</option>').join('')}
-function buyPlan(id){document.getElementById('o_plan').value=id;toast('پلن انتخاب شد، فرم را کامل کن')}
-function copyCard(){navigator.clipboard&&navigator.clipboard.writeText(db.cardNumber);toast('شماره کارت کپی شد')}
-async function submitOrder(){let file=document.getElementById('o_receipt').files[0];let img='';if(file){img=await new Promise(res=>{let r=new FileReader();r.onload=()=>res(r.result);r.readAsDataURL(file)})}let code='ORD-'+(db.orderSeq++);db.orders.unshift({code,name:document.getElementById('o_name').value,mobile:document.getElementById('o_mobile').value,plan:document.getElementById('o_plan').value,receipt:img.slice(0,20000),status:'pending',time:Date.now()});saveLocal();renderOrdersAdmin();await publish();sendTG('🧾 سفارش جدید '+code);toast('سفارش ثبت شد! کد: '+code)}
+function renderPlans(){let h='';(db.plans||[]).forEach(p=>{h+='<div class="dnsrow"><div><b>'+p.name+'</b><br>'+p.price+' تومان</div><button onclick="buyPlan(\''+p.id+'\')">خرید</button></div>'});document.getElementById('planList').innerHTML=h;document.getElementById('o_plan').innerHTML=(db.plans||[]).map(p=>'<option value="'+p.id+'">'+p.name+'</option>').join('')}
+function buyPlan(id){document.getElementById('o_plan').value=id;toast('پلن انتخاب شد')}
+function copyCard(){if(navigator.clipboard)navigator.clipboard.writeText(db.cardNumber);toast('کارت کپی شد')}
+async function submitOrder(){let file=document.getElementById('o_receipt').files[0];let img='';if(file){img=await new Promise(res=>{let r=new FileReader();r.onload=()=>res(r.result);r.readAsDataURL(file)})}let code='ORD-'+(db.orderSeq++);db.orders.unshift({code,name:document.getElementById('o_name').value,mobile:document.getElementById('o_mobile').value,plan:document.getElementById('o_plan').value,receipt:img.slice(0,20000),status:'pending',time:Date.now()});saveLocal();renderOrdersAdmin();await publish();sendTG('🧾 سفارش جدید '+code);toast('ثبت شد! کد: '+code)}
 function renderOrdersAdmin(){let h='<table><tr><th>کد</th><th>وضعیت</th><th>عمل</th></tr>';(db.orders||[]).forEach(o=>{h+='<tr><td>'+o.code+'<br><small>'+(o.name||'')+'</small></td><td>'+o.status+'</td><td><button onclick="approveOrder(\''+o.code+'\')">تایید</button></td></tr>'});document.getElementById('ordersAdmin').innerHTML=h+'</table>'}
-async function approveOrder(code){let o=db.orders.find(x=>x.code===code);if(!o)return;let lic=genCode();db.licenses.unshift({code:lic,status:'active',createdAt:Date.now(),expiresAt:Date.now()+30*864e5});o.status='approved';o.license=lic;saveLocal();renderOrdersAdmin();renderLicenses();await publish();toast('تایید شد! لایسنس: '+lic)}
+async function approveOrder(code){let o=db.orders.find(x=>x.code===code);if(!o)return;let lic=genCode();db.licenses.unshift({code:lic,status:'active',createdAt:Date.now(),expiresAt:Date.now()+30*864e5});o.status='approved';o.license=lic;saveLocal();renderOrdersAdmin();renderLicenses();await publish();toast('تایید شد! '+lic)}
 function trackOrder(){let c=document.getElementById('tr_code').value.trim();let o=(db.orders||[]).find(x=>x.code===c);document.getElementById('trRes').innerHTML=o?('وضعیت: '+o.status+(o.license?'<br>لایسنس: <b>'+o.license+'</b>':'')):'یافت نشد'}
 function saveSettings(){db.cardNumber=document.getElementById('s_card').value;db.cardOwner=document.getElementById('s_owner').value;db.telegramBot=document.getElementById('s_bot').value;db.telegramChatId=document.getElementById('s_chat').value;saveLocal();renderAll();publish();toast('ذخیره شد ✅')}
 function exportBackup(){let b=new Blob([JSON.stringify(db)],{type:'application/json'});let a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='gold-backup.json';a.click()}
-// Ticket
-async function submitTicket(){let n=document.getElementById('t_name').value,m=document.getElementById('t_mobile').value,s=document.getElementById('t_subject').value,msg=document.getElementById('t_msg').value;if(!msg)return toast('پیام را بنویس');let id=db.ticketSeq++;db.tickets.unshift({id,name:n,mobile:m,subject:s,msg,reply:'',open:true,time:Date.now()});let mine=JSON.parse(localStorage.getItem('my_ticket_ids')||'[]');mine.push(id);localStorage.setItem('my_ticket_ids',JSON.stringify(mine));saveLocal();loadMyTickets();await publish();sendTG('🎫 تیکت جدید #'+id+'\n'+s+'\n'+msg);toast('تیکت ثبت شد #'+id)}
-function loadMyTickets(){let mine=JSON.parse(localStorage.getItem('my_ticket_ids')||'[]');let h='';(db.tickets||[]).filter(t=>mine.includes(t.id)).forEach(t=>{h+='<div class="card">#'+t.id+' '+(t.open?'🟢 باز':'🔴 بسته')+'<br>'+t.subject+'<br><small>'+t.msg+'</small><br><b>پاسخ مدیر:</b> '+(t.reply||'—')+'</div>'});document.getElementById('myTickets').innerHTML=h||'تیکتی نداری'}
-function loadTicketsAdmin(){let h='<table>';(db.tickets||[]).forEach(t=>{h+='<tr><td>#'+t.id+' '+(t.open?'باز':'بسته')+'<br><b>'+(t.subject||'')+'</b><br><small>'+(t.msg||'')+'</small><br>↩️ '+(t.reply||'—')+'</td><td><button onclick="replyTicket('+t.id+')">پاسخ</button><button onclick="toggleTicket('+t.id+')">باز/بسته</button><button onclick="delTicket('+t.id+')">حذف</button></td></tr>'});document.getElementById('ticketsAdmin').innerHTML=h+'</table>'}
+async function submitTicket(){let s=document.getElementById('t_subject').value,msg=document.getElementById('t_msg').value;if(!msg)return toast('پیام را بنویس');let id=db.ticketSeq++;db.tickets.unshift({id,name:document.getElementById('t_name').value,mobile:document.getElementById('t_mobile').value,subject:s,msg,reply:'',open:true,time:Date.now()});let mine=JSON.parse(localStorage.getItem('my_ticket_ids')||'[]');mine.push(id);localStorage.setItem('my_ticket_ids',JSON.stringify(mine));saveLocal();loadMyTickets();await publish();sendTG('🎫 تیکت جدید #'+id+'\n'+s+'\n'+msg);toast('ثبت شد #'+id)}
+function loadMyTickets(){let mine=JSON.parse(localStorage.getItem('my_ticket_ids')||'[]');let h='';(db.tickets||[]).filter(t=>mine.includes(t.id)).forEach(t=>{h+='<div class="dnsrow"><div>#'+t.id+' '+(t.open?'🟢':'🔴')+'<br><b>'+(t.subject||'')+'</b><br><small>'+(t.msg||'')+'</small><br>↩️ '+(t.reply||'—')+'</div></div>'});document.getElementById('myTickets').innerHTML=h||'تیکتی نداری'}
+function loadTicketsAdmin(){let h='<table>';(db.tickets||[]).forEach(t=>{h+='<tr><td>#'+t.id+'<br><b>'+(t.subject||'')+'</b><br><small>'+(t.msg||'')+'</small><br>↩️ '+(t.reply||'—')+'</td><td><button onclick="replyTicket('+t.id+')">پاسخ</button><button onclick="toggleTicket('+t.id+')">باز/بسته</button><button onclick="delTicket('+t.id+')">حذف</button></td></tr>'});document.getElementById('ticketsAdmin').innerHTML=h+'</table>'}
 function replyTicket(id){let r=prompt('پاسخ مدیر:');if(r==null)return;let t=db.tickets.find(x=>x.id===id);t.reply=r;saveLocal();loadTicketsAdmin();publish()}
 function toggleTicket(id){let t=db.tickets.find(x=>x.id===id);t.open=!t.open;saveLocal();loadTicketsAdmin();publish()}
 function delTicket(id){db.tickets=db.tickets.filter(x=>x.id!==id);saveLocal();loadTicketsAdmin();publish()}
-// Admin
 function adminLogin(){let v=document.getElementById('adminPassInput').value;if(v===db.adminPass||v===FORCE_ADMIN_PASS){go('sec-admin',null);renderAll();toast('خوش آمدی مدیر 👑')}else toast('رمز اشتباه است')}
 init();
 </script>
