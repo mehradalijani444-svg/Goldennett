@@ -86,14 +86,14 @@ h3{color:#ffdf6b}h4{color:#ffe9a3}.dot{width:10px;height:10px;border-radius:50%;
 <div class="tabs"><button id="t-home" class="active" onclick="showSec('sec-home')">🏠<br>خانه</button><button id="t-dns" onclick="showSec('sec-dns')">🌐<br>دی‌انس</button><button id="t-vpn" onclick="showSec('sec-vpn')">🚀<br>VPN</button><button id="t-buy" onclick="showSec('sec-buy')">🛒<br>خرید</button><button id="t-track" onclick="showSec('sec-track')">🔍<br>پیگیری</button><button id="t-admin" onclick="showSec('sec-adminlogin')">⚙️<br>مدیر</button></div>
 <script>
 const DEFAULT_BIN_ID="6b08315bab3a7b614482b271";const DEFAULT_MASTER_KEY="$2a$10$y0RCL.deWB8jwGjbmlprp.grIG6VKrwTni3MstpLTfv.aPq61j0d2";
-let DB_KEY='gold_jsonbin_v1';let db=null;let selVPN=1;
-function defaultDB(){return{adminPass:'Q3YGnhG3G3s7LE25',cardNumber:'6037991234567890',cardOwner:'به‌نام گلدن نت',orderSeq:1001,pricePerGb:1800,vpnBase:35000,coef3:2.6,coef6:4.8,coef12:8.5,unlimitedPrice:280000,binId:'6b08315bab3a7b614482b271',masterKey:'$2a$10$y0RCL.deWB8jwGjbmlprp.grIG6VKrwTni3MstpLTfv.aPq61j0d2',tgToken:'',tgChat:'',dns:[{id:1,name:'کلادفلر',a1:'1.1.1.1',a2:'1.0.0.1',loc:'جهانی',price:0},{id:2,name:'گیمینگ VIP',a1:'9.9.9.9',a2:'149.112.112.112',loc:'آلمان',price:50000}],vpnServers:[{id:1,name:'آلمان ۱',country:'آلمان',flag:'🇩🇪',ping:78,extra:0},{id:2,name:'ترکیه گیمینگ',country:'ترکیه',flag:'🇹🇷',ping:45,extra:15000}],plans:[{id:1,title:'۱ ماهه ویژه',days:30,price:60000}],licenses:[],orders:[]};}
+let DB_KEY='gold_jsonbin_v3';let db=null;let selVPN=1;
+function defaultDB(){return{adminPass:'Q3YGnhG3G3s7LE25',cardNumber:'6037990000000000',cardOwner:'به‌نام گلدن نت',orderSeq:1001,pricePerGb:1800,vpnBase:35000,coef3:2.6,coef6:4.8,coef12:8.5,unlimitedPrice:280000,binId:'6b08315bab3a7b614482b271',masterKey:'$2a$10$y0RCL.deWB8jwGjbmlprp.grIG6VKrwTni3MstpLTfv.aPq61j0d2',tgToken:'',tgChat:'',dns:[{id:1,name:'کلادفلر',a1:'1.1.1.1',a2:'1.0.0.1',loc:'جهانی',price:0},{id:2,name:'گیمینگ VIP',a1:'9.9.9.9',a2:'149.112.112.112',loc:'آلمان',price:50000}],vpnServers:[{id:1,name:'آلمان ۱',country:'آلمان',flag:'🇩🇪',ping:78,extra:0},{id:2,name:'ترکیه گیمینگ',country:'ترکیه',flag:'🇹🇷',ping:45,extra:15000}],plans:[{id:1,title:'۱ ماهه ویژه',days:30,price:60000}],licenses:[],orders:[]};}
 function getBin(){return (db.binId||localStorage.getItem('jb_bin')||DEFAULT_BIN_ID||'').trim();}
 function getKey(){return (db.masterKey||localStorage.getItem('jb_key')||DEFAULT_MASTER_KEY||'').trim();}
 function cloudOn(){return getBin().length>10&&getKey().length>10;}
 function updateCloudBadge(){let el=document.getElementById('cloudBadge');if(cloudOn())el.innerHTML='<span class="dot" style="background:#22c55e"></span> متصل به دیتابیس ابری';else el.innerHTML='<span class="dot" style="background:#ef4444"></span> آفلاین - Bin ID را در پنل وارد کن';}
 function saveLocal(){try{localStorage.setItem(DB_KEY,JSON.stringify(db))}catch(e){}}
-function loadLocal(){try{db=JSON.parse(localStorage.getItem(DB_KEY));if(!db)throw 0}catch(e){db=defaultDB();saveLocal()}}
+function loadLocal(){try{db=JSON.parse(localStorage.getItem(DB_KEY));if(!db)throw 0}catch(e){db=defaultDB();saveLocal()}try{localStorage.removeItem('gold_jsonbin_v1');localStorage.removeItem('gold_jsonbin_v2');}catch(e){}}
 loadLocal();
 async function jbGet(){let r=await fetch('https://api.jsonbin.io/v3/b/'+getBin()+'/latest',{headers:{'X-Master-Key':getKey()}});if(!r.ok)throw 0;let j=await r.json();return j.record;}
 async function jbPut(data){let r=await fetch('https://api.jsonbin.io/v3/b/'+getBin(),{method:'PUT',headers:{'Content-Type':'application/json','X-Master-Key':getKey()},body:JSON.stringify(data)});if(!r.ok)throw 0;}
@@ -131,7 +131,7 @@ function addVPNServer(){let n=document.getElementById('nv_name').value;if(!n){al
 function delVPN(id){if(confirm('حذف؟')){db.vpnServers=db.vpnServers.filter(s=>s.id!==id);cloudSaveAll();renderAdmin()}}
 function saveVPNPricing(){db.pricePerGb=parseInt(document.getElementById('set_ppg').value||db.pricePerGb);db.vpnBase=parseInt(document.getElementById('set_base').value||db.vpnBase);db.coef3=parseFloat(document.getElementById('set_c3').value||db.coef3);db.coef6=parseFloat(document.getElementById('set_c6').value||db.coef6);db.coef12=parseFloat(document.getElementById('set_c12').value||db.coef12);db.unlimitedPrice=parseInt(document.getElementById('set_unl').value||db.unlimitedPrice);cloudSaveAll();alert('ذخیره و منتشر شد');calcVPN();}
 function genCode(){let c='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';let s='GOLD-';for(let i=0;i<4;i++)s+=c[Math.floor(Math.random()*c.length)];s+='-';for(let i=0;i<4;i++)s+=c[Math.floor(Math.random()*c.length)];return s;}
-function genConfig(){let r='';let ch='abcdef0123456789';for(let i=0;i<10;i++)r+=ch[Math.floor(Math.random()*ch.length)];return 'vless://'+r+'@golden.ir:443?security=tls#'+r;}
+function genConfig(){let r='';let ch='abcdef0987654321';for(let i=0;i<10;i++)r+=ch[Math.floor(Math.random()*ch.length)];return 'vless://'+r+'@golden.ir:443?security=tls#'+r;}
 async function createLicense(){let d=parseInt(document.getElementById('nl_days').value);let code=genCode();let e=new Date();e.setDate(e.getDate()+d);let L={code:code,days:d,status:'active',createdAt:new Date().toISOString(),expiresAt:e.toISOString()};db.licenses.push(L);await cloudSaveAll();renderAdmin();alert('کد: '+code);}
 async function approveOrder(id){let o=db.orders.find(x=>x.id===id);let code=genCode();let days=o.type==='vpn'?o.months*30:(o.days||30);let e=new Date();e.setDate(e.getDate()+days);let L={code:code,days:days,status:'active',createdAt:new Date().toISOString(),expiresAt:e.toISOString()};db.licenses.push(L);o.status='approved';o.licenseCode=code;if(o.type==='vpn')o.config=genConfig();await cloudSaveAll();renderAdmin();alert('تایید شد: '+code);}
 async function rejectOrder(id){let o=db.orders.find(x=>x.id===id);o.status='rejected';await cloudSaveAll();renderAdmin();}
@@ -141,4 +141,4 @@ function saveSettings(){db.cardNumber=document.getElementById('set_card').value|
 (async function(){updateCloudBadge();await cloudLoadConfig();renderDNS();renderVPNServers();calcVPN();renderBuy();updateBadge();updateCloudBadge();})();
 </script>
 </body>
-</html>
+                                                                                                                                                                                                                                                                                                                                                                                     </html>
